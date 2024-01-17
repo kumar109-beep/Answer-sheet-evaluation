@@ -13,6 +13,7 @@ def rectContours(contours):
             approx = cv2.approxPolyDP(i,0.02*param,True)
             # print("corner points >>>> ",len(approx))
             if(len(approx) == 4):
+                print("")
                 rectangleContours.append(i)
 
     rectCon = sorted(rectangleContours,key=cv2.contourArea,reverse=True)
